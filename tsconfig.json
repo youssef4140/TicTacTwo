@@ -6,12 +6,18 @@
         "strict": true,
         "baseUrl": "./",
         "paths": {
-            "@/*": ["*"],
+            "@/*": [
+                "*"
+            ],
         }
     },
     "module": "CommonJS",
     "rootDir": "./",
     "outDir": "./dist",
     "esModuleInterop": true,
-    "strict": true
+    "strict": true,
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
 }
