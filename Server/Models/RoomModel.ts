@@ -19,7 +19,12 @@ export default {
     leave(roomId: string, playerId: string): Room {
 
         let room = this.get(roomId);
-        if (!room) throw new Error(`Room ${roomId} doesn't exist`);
+        if (!room) 
+        {
+            console.error(`Room ${roomId} doesn't exist`)
+            throw new Error(`Room ${roomId} doesn't exist`);
+
+        }
         room.leave(playerId);
         if (room.playerCount <= 0) this.delete(roomId);
         return room;

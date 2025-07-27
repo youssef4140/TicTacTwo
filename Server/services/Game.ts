@@ -32,7 +32,7 @@ export default class Game implements GameInterface {
 
 
         tile.symbol = playerSymbol;
-        tile.turns = 4;
+        tile.turns = 7;
         this.checkWin()
         this.flipTurn();
         return this;
@@ -42,13 +42,13 @@ export default class Game implements GameInterface {
 
     private updateTurns(symbol: 'X' | 'O') {
         this.tiles.forEach((t) => {
-            if (t.symbol === symbol) {
+            // if (t.symbol === symbol) {
                 t.turns--;
                 if (t.turns <= 0) {
                     t.turns = 0;
                     t.symbol = null;
                 }
-            }
+            // }
         })
     }
     private checkWin() {

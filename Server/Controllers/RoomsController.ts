@@ -32,6 +32,7 @@ export default {
             socket.join(roomId);
             let room = rooms.get(roomId);
             if (!room) {
+                console.error(`Room ${roomId} does not exist.`)
                 throw new Error(`Room ${roomId} does not exist.`);
             }
             io.to(roomId).emit('roomUpdated', { room: room })
