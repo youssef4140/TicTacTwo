@@ -32,7 +32,7 @@ export default class Game implements GameInterface {
 
 
         tile.symbol = playerSymbol;
-        tile.turns = 3;
+        tile.turns = 4;
         this.checkWin()
         this.flipTurn();
         return this;
